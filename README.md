@@ -55,7 +55,6 @@ class Stack:
 
 
     def isEmpty(self):
-        # YOUR CODE STARTS HERE
         #checks if there is a top pointer
         return self.top == None
 
