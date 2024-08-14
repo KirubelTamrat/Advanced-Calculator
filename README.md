@@ -1,4 +1,4 @@
-# Stack-Based-Calculator-
+#Advanced Calculator
 Advanced stack-based calculator in Python, designed to evaluate complex expressions, convert infix to postfix notation, and handle variable assignments. 
 
 class Node:
@@ -59,7 +59,6 @@ class Stack:
         return self.top == None
 
     def __len__(self): 
-        # YOUR CODE STARTS HERE
         count = 0
         current = self.top
         #counts the number of nodes in the stack by traversing the linked list 
@@ -70,7 +69,6 @@ class Stack:
     
 
     def push(self,value):
-        # YOUR CODE STARTS HERE
         #creates new node
         new_node = Node(value)
         #adds new node to top of the stack
@@ -79,7 +77,6 @@ class Stack:
 
      
     def pop(self):
-        # YOUR CODE STARTS HERE
         #if stack is empty return none 
         if self.isEmpty():
             return None
@@ -91,7 +88,6 @@ class Stack:
 
 
     def peek(self):
-        # YOUR CODE STARTS HERE
         #if stack is empty return none
         if self.isEmpty():
             return None
@@ -127,7 +123,7 @@ class Calculator:
             >>> x._isNumber('2.56p')
             False
         '''
-        # YOUR CODE STARTS HERE
+        
         #remove whitespaces
         txt = txt.strip()
         #check if txt is empty 
@@ -193,7 +189,6 @@ class Calculator:
             >>> x._getPostfix('2 * 5% + 3 ^ + -2 + 1 + 4')
         '''
 
-        # YOUR CODE STARTS HERE
         postfixStack = Stack()  # method must use postfixStack to compute the postfix expression
         #adjust the expression to handle implicit multiplication
         adjusted_expression = self._handleImplicitMultiplication(txt)  
@@ -479,7 +474,6 @@ class Calculator:
 
         calcStack = Stack()   # method must use calcStack to compute the  expression
 
-        # YOUR CODE STARTS HERE
         #convert infix notation to postfix notation
         postfix_expr = self._getPostfix(self.getExpr)
 
@@ -590,7 +584,6 @@ class AdvancedCalculator:
             >>> C._replaceVariables('x2 - x1')
             '28.0 - 23.0'
         '''
-        # YOUR CODE STARTS HERE
         #split the input expression into a list
         lst = expr.split()
 
@@ -611,7 +604,6 @@ class AdvancedCalculator:
     def calculateExpressions(self):
         self.states = {} 
         calcObj = Calculator()     # method must use calcObj to compute each expression
-        # YOUR CODE STARTS HERE
         #initialize an empty dictionary to store the progression of calculations
         calculation_progression = {}
 
